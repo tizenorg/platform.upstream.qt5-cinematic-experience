@@ -27,6 +27,11 @@ interfaces with increased dynamics.
 export QTDIR=/usr/share/qt5
 touch .git # To make sure syncqt is used
 
+# overide non-libre material
+for i in $(seq 1 20) ; do
+  ln -fs qt_ambassador_logo.png content/images/$i.png
+done
+
 %qmake5 CONFIG+=package
 
 
